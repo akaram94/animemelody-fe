@@ -92,7 +92,7 @@ class Header extends Component {
         <header className="container-fluid">
             <div className="row">
                 <div className="col-md-2 col-sm-3 mt-2 d-none d-md-block">
-                    <h5 id="headerText" title="Created by Abdallah Karam">AnimeMelody</h5>
+                    <h5 id="headerText" title="Created by akaram94 on GitHub.">AnimeMelody</h5>
                 </div>
                 <div className="col-md-8 col-10">
                     <div id="searchBar">
