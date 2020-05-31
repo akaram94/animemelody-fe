@@ -23,7 +23,7 @@ function App() {
               
             </div>
           </div>
-          <div id="queueTableContainer">
+          <div id="queueTableContainer" className="hide">
             <div className="mx-auto pl-5 pr-5 mt-4">
               <p>You can make a playlist by adding songs using the + button. Your songs will show up here once you add them.</p>
             </div>

@@ -67,12 +67,22 @@ class Header extends Component {
     togglePlaylist(){
         var queue = document.getElementById('queueTableContainer');
 
-        if(queue.style.display === "none" || queue.style.display === ""){
-            queue.style.display = "block";
+        if(queue.classList.contains('hide')){
+            queue.classList.add('show');
+            queue.classList.remove('hide');
+        }
+
+        else if(queue.classList.contains('show')){
+            queue.classList.add('hide');
+            queue.classList.remove('show');
+        }
+
+        if(document.body.classList.contains('hide-scroll')){
+            document.body.classList.remove('hide-scroll');
         }
 
         else{
-            queue.style.display = "none";
+            document.body.classList.add('hide-scroll');
         }
 
     }
@@ -82,7 +92,7 @@ class Header extends Component {
         <header className="container-fluid">
             <div className="row">
                 <div className="col-md-2 col-sm-3 mt-2 d-none d-md-block">
-                    <h5 id="headerText">AnimeMelody</h5>
+                    <h5 id="headerText" title="Created by Abdallah Karam">AnimeMelody</h5>
                 </div>
                 <div className="col-md-8 col-10">
                     <div id="searchBar">
@@ -94,8 +104,8 @@ class Header extends Component {
                         />
                     </div>
                 </div>
-                <div className="col-2 playlist-button mx-auto">
-                    <Button onClick={this.togglePlaylist} block><FontAwesomeIcon icon="bars" size="1x" /></Button>
+                <div className="col-2 playlist-button">
+                    <Button className="float-right" onClick={this.togglePlaylist} block><FontAwesomeIcon icon="bars" size="1x" /></Button>
                 </div>
             </div>
         </header>

@@ -73,7 +73,6 @@ html, body, #root{
   height: 100vh;
   z-index: 999;
   background-color: #e0eaec;
-  display: none;
   overflow-y: scroll;
 }
 
@@ -89,16 +88,63 @@ html, body, #root{
   background-color: #8ecee1;
 }
 
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 400ms;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 400ms, opacity 400ms;
+}
+
+.hide-scroll{
+  overflow-y: hidden;
+}
+
+.queued > svg {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.queued-2 > svg {
+  animation-name: spin-2;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(180deg);
+  }
+}
+
+@keyframes spin-2 {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(180deg);
+  }
+}
+
 @media(max-width: 1199px){
   #queueTableContainer{
     position: fixed;
-    top: 70px;
+    top: 67px;
     right: 0;
     width: 100vw;
     height: 100vh;
     z-index: 999;
     background-color: #e0eaec;
-    display: none;
   }
 }
 

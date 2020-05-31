@@ -38,6 +38,17 @@ class ShowTable extends Component {
         queueUpdated.push(this.state.data[index]);
         this.setState({queue: queueUpdated});
 
+        var button = document.querySelector(`.queue-${index}`);
+
+        if(button.classList.contains('queued') || button.classList.contains('queued-2')){
+            button.classList.toggle('queued');
+            button.classList.toggle('queued-2');
+        }
+
+        else{
+            button.classList.add('queued');
+        }
+
         var element = <QueueTable id="queueTable" data={this.state.queue} />;
 
         if(document.getElementById('queueTable') != null){
@@ -67,9 +78,10 @@ class ShowTable extends Component {
             rows.push(<tr key={i}>
                 <td>{this.state.data[i].name} - {this.state.data[i].theme_type}</td>
                 <td><Button key={i} onClick={this.loadVideo.bind(this, i)}  block><FontAwesomeIcon icon="play" size="1x" /></Button></td>
-                <td><Button key={i} onClick={this.queueVideo.bind(this, i)}  block><FontAwesomeIcon icon="plus" size="1x" /></Button></td>
+                <td><Button key={i} className={`queue-${i}`} onClick={this.queueVideo.bind(this, i)}  block><FontAwesomeIcon icon="plus" size="1x" /></Button></td>
             </tr>);
         }
+
         return (
             <div>
                 <Table id="showTable" bordered condensed responsive>
