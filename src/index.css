@@ -11,3 +11,99 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header{
+  background-color: #88C5A1;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+html, body, #root{
+  background-color: #FCFCF4;
+}
+
+#headerText{
+  color: white;
+}
+
+#queueTable{
+  margin-bottom: 0;
+}
+
+#showTable > thead, #queueTable > thead{
+  background-color: #e1b58e;
+  color: white;
+}
+
+#showTable > tbody > tr{
+  background-color: white;
+}
+
+#movieInfoBox{
+  padding: 2rem 2rem;
+  background-color: #e1b58e;
+  color: white;
+}
+
+#queueTable > thead button{
+  border-radius: 50px;
+  background-color: #447786;
+  border-color: #447786;
+}
+
+.playlist-button > button{
+  background-color: #429764;
+  border-color: #429764;
+  max-width: 50px;
+}
+
+.playlist-button > button:hover, .playlist-button > button:focus, .playlist-button > button:active{
+  background-color: #429764;
+  border-color: #429764;
+  filter: brightness(85%);
+}
+
+#queueTableContainer{
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 33.3%;
+  height: 100vh;
+  z-index: 999;
+  background-color: #e0eaec;
+  display: none;
+  overflow-y: scroll;
+}
+
+#videoPlayerContainer{
+  background-color: black;
+}
+
+.main-content{
+  margin-top: 85px;
+}
+
+.activeSong{
+  background-color: #8ecee1;
+}
+
+@media(max-width: 1199px){
+  #queueTableContainer{
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #e0eaec;
+    display: none;
+  }
+}
+
+@media(max-width: 767px){
+  #searchBar{
+    width: 100%;
+  }
+}
