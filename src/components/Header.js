@@ -97,6 +97,7 @@ class Header extends Component {
                 <div className="col-md-8 col-10">
                     <div id="searchBar">
                         <AsyncSelect
+                            placeholder="Search for an anime (e.g. Dragon Ball)"
                             cacheOptions
                             loadOptions={loadOptions}
                             onInputChange={this.handleInputChange}
