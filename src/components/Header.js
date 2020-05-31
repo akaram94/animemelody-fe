@@ -106,7 +106,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <div className="col-2 playlist-button">
-                    <Button className="float-right" onClick={this.togglePlaylist} block><FontAwesomeIcon icon="bars" size="1x" /></Button>
+                    <Button className="float-right" title="Playlist" onClick={this.togglePlaylist} block><FontAwesomeIcon icon="bars" size="1x" /></Button>
                 </div>
             </div>
         </header>

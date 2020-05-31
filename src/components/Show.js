@@ -78,7 +78,7 @@ class ShowTable extends Component {
             rows.push(<tr key={i}>
                 <td>{this.state.data[i].name} - {this.state.data[i].theme_type}</td>
                 <td><Button key={i} onClick={this.loadVideo.bind(this, i)}  block><FontAwesomeIcon icon="play" size="1x" /></Button></td>
-                <td><Button key={i} className={`queue-${i}`} onClick={this.queueVideo.bind(this, i)}  block><FontAwesomeIcon icon="plus" size="1x" /></Button></td>
+                <td><Button title="Add to Playlist" key={i} className={`queue-${i}`} onClick={this.queueVideo.bind(this, i)}  block><FontAwesomeIcon icon="plus" size="1x" /></Button></td>
             </tr>);
         }
 
