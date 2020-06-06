@@ -79,6 +79,7 @@ html, body, #root{
 
 #videoPlayerContainer{
   background-color: black;
+  max-height: 720px;
 }
 
 .main-content{

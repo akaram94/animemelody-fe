@@ -62,7 +62,7 @@ class QueueTable extends Component {
             while (activeSongs.length)
                 activeSongs[0].className = activeSongs[0].className.replace(/\bactiveSong\b/g, "");
 
-            var d = document.getElementById("queueTable").rows[this.state.currentVideo];
+            var d = document.getElementById("queueTable").rows[index + 1];
             d.className += " activeSong";
 
             const element = <MovieBox data={this.state.queue[index]} />;
