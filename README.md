@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AnimeMelody's Front-end
+
+This is the front-end component for https://www.animemelody.ca/. It's designed in ReactJS, and it makes calls to the Django REST API I set up. 
+You can view the source code for that here: https://github.com/akaram94/animemelody.
 
 ## Available Scripts
 
